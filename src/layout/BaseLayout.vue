@@ -28,7 +28,7 @@ export default {
                 <Navbar></Navbar>
             </div>
             <!-- Konten lainnya -->
-            <div class="flex-1 overflow-y-auto shadow bg-customGray p-6">
+            <div class="flex-1 overflow-y-auto shadow bg-customGray p-3">
                 <RouterView></RouterView>
             </div>
         </div>

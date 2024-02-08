@@ -1,57 +1,19 @@
 <template>
     <div>
-        <div class="flex justify-between">
-            <!-- Card 1 -->
-            <div class="bg-white shadow-lg rounded-lg w-1/3 border border-gray-200 ">
-                <div class="flex flex-col h-full">
-                    <div class="h-2/3 rounded-t-lg">
-                        <p class="text-lg font-semibold text-gray-600 p-4">Pending</p>
-                    </div>
-                    <div class="flex justify-between items-center bg-customGray2 rounded-b-lg h-1/3">
-                        <div class="p-4">
-                            <p class="text-xs text-gray-400">Last Month</p>
-                        </div>
-                        <div class="p-4">
-                            <p class="text-xs text-gray-600">View More</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="flex justify-between pt-3">
+            <Card />
+            <Card />
+            <Card />
 
-            <!-- Card 2 -->
-            <div class="bg-white shadow-lg rounded-lg p-6 w-1/3 ml-4 border border-gray-200">
-                <div class="mb-4">
-                    <p class="text-lg font-semibold text-green-500">Paid</p>
-                    <hr class="my-2 border-t border-gray-300">
-                    <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                <div>
-                    <p class="text-xs text-gray-500">Last Month</p>
-                    <p class="text-xs text-green-500">View More</p>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="bg-white shadow-lg rounded-lg p-6 w-1/3 ml-4 border border-gray-200">
-                <div class="mb-4">
-                    <p class="text-lg font-semibold text-red-500">Rejected</p>
-                    <hr class="my-2 border-t border-gray-300">
-                    <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                <div>
-                    <p class="text-xs text-gray-500">Last Month</p>
-                    <p class="text-xs text-red-500">View More</p>
-                </div>
-            </div>
         </div>
     </div>
 
-    <div class="outer-container bg-white shadow-lg rounded-lg mt-4 border border-gray-200">
-        <h1 class="text-3xl font-bold mb-4">User List</h1>
+    <div class="outer-container bg-white shadow-lg rounded-t-xl m-3 mt-6 border border-gray-200">
+        <h1 class="text-xl m-4 font-bold mb-4">User List</h1>
         <div class="inner-container">
             <table class="w-full border-collapse text-sm">
                 <thead>
-                    <tr class="bg-gray-100">
+                    <tr class="bg-customGray2 text-gray-500">
                         <th class="py-2 px-4 text-left">ID</th>
                         <th class="py-2 px-4 text-left">User</th>
                         <th class="py-2 px-4 text-left">Date Of Birth</th>
@@ -91,6 +53,7 @@
 <script>
 import axios from 'axios';
 import formatDateOfBirth from '../helper/formatDate.js'
+import Card from '../components/Card.vue'
 export default {
     name: 'Dashboard',
     data() {
@@ -113,6 +76,9 @@ export default {
             }
         },
         formatDateOfBirth
+    },
+    components: {
+        Card
     }
 }
 </script>
