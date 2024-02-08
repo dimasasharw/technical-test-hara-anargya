@@ -4,7 +4,10 @@ module.exports = {
   theme: {
     extend: {
       brightness: {},
-      colors: {},
+      colors: {
+        customGray: '#F7F8FA',
+        customGray2: '#F9FAFC'
+      },
     },
   },
   plugins: [],
